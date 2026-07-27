@@ -1,0 +1,127 @@
+{
+  "$schema": "https://piezas.ai/schemas/piezas-manifest.schema.json",
+  "schemaVersion": 1,
+  "generatedBy": "piezas",
+  "appName": "Racing Game",
+  "apiBaseUrl": "https://api.piezas.ai",
+  "productType": "custom-app",
+  "deploymentMode": "next-bff",
+  "piezasOwns": [
+    "businessRecords",
+    "crmRecords",
+    "accountingRecords",
+    "ledgerEntryRecords",
+    "reconciliationRecords",
+    "documentExtractionRecords",
+    "signatureRequestRecords",
+    "financeAccounts",
+    "bills",
+    "bankTransactions",
+    "calendarAvailability",
+    "bookings",
+    "integrationConnections",
+    "integrationAppRegistry",
+    "integrationCredentials",
+    "integrationAppPolicies",
+    "integrationGrants",
+    "integrationTokenRefresh",
+    "notifications",
+    "workflowState",
+    "durableJobs",
+    "syncJobs",
+    "jobLockState",
+    "mcpToolDiscovery",
+    "publicSessions",
+    "auditEvents",
+    "accessLogs",
+    "filesAndDocuments",
+    "reportingData",
+    "searchImportExport"
+  ],
+  "appOwns": [
+    "ui",
+    "routing",
+    "sessionGlue",
+    "mcpRouteAccessControl",
+    "workflowOrchestration",
+    "viewState"
+  ],
+  "serverOnlySecrets": [
+    "PIEZAS_API_KEY",
+    "NEXTAUTH_SECRET",
+    "AUTH_SECRET",
+    "SESSION_SECRET",
+    "ADMIN_TOKEN",
+    "ADMIN_PASS",
+    "GOOGLE_CLIENT_SECRET",
+    "ZOOM_CLIENT_SECRET"
+  ],
+  "integrationPolicy": {
+    "piezasOwns": [
+      "providerClientConfig",
+      "appScopedProviderClientConfig",
+      "appAllowedOrigins",
+      "appAllowedRedirectUris",
+      "appConnectorPurposePolicy",
+      "providerActionCatalog",
+      "oauthCallbacks",
+      "encryptedAccessTokens",
+      "encryptedRefreshTokens",
+      "tokenRefresh",
+      "syncCursors",
+      "connectionGrants",
+      "documentExtractionJobs",
+      "signatureRequests"
+    ],
+    "appStoresOnly": [
+      "appIds",
+      "connectionIds",
+      "grantIds",
+      "externalRecordRefs"
+    ],
+    "appScopedOAuth": "Create a Piezas tenant app for each generated app/domain/use case, save provider client config with appId and purpose, and pass appId/purpose on OAuth start and connection lookup.",
+    "payments": "Use provider integrations for payment links or references; Piezas does not process money."
+  },
+  "recommendedPatterns": [
+    "relationships",
+    "ledger",
+    "accounting-postings",
+    "reconciliation",
+    "thin-server-adapter",
+    "sdk-mcp-route",
+    "public-sessions",
+    "durable-jobs",
+    "sync-jobs"
+  ],
+  "mcp": {
+    "requested": false,
+    "enabled": false,
+    "sdkExport": "piezasMcp",
+    "routePath": null,
+    "availableTools": [
+      "entity-records",
+      "pipeline",
+      "tasks"
+    ],
+    "appMustProvide": [
+      "sessionAuth",
+      "tenantContext",
+      "userContext",
+      "routeAccessControl"
+    ],
+    "note": "Use `npx piezas init --mcp --mode next-bff` or mount `piezasMcp` in a server runtime when agent tool access is needed."
+  },
+  "publicRoutes": [],
+  "recipes": [],
+  "notes": [
+    "Future recipes should extend this manifest instead of replacing it.",
+    "Run `npx piezas doctor` after AI-generated changes."
+  ],
+  "deploy": {
+    "appId": "dfd02819-5b9b-4ead-99bf-f2e1f8d287b7",
+    "requiredEnv": [],
+    "mode": "mixed",
+    "slug": "racing-game-7725",
+    "url": "https://racing-game-7725.apps.piezas.ai"
+  }
+}

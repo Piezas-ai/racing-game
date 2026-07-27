@@ -1,0 +1,16 @@
+# piezas
+.env
+.env.*
+!.env.example
+
+# deps / build
+node_modules
+.next
+*.tsbuildinfo
+next-env.d.ts
+client/dist
+deploy
+
+# os
+.DS_Store
+gaps-analysis.md
